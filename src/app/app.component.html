@@ -10,11 +10,14 @@
 </nav> 
 <div class="container-fluid">
   <div id="main">
-    <app-list-view></app-list-view>
+    <router-outlet></router-outlet>
   </div>
 </div>
 <footer class="footer mt-auto py-3"><div class="container">
-  <span class="float-right"><a href="http://github.com/bfdurieux"><img src="../assets/GitHub-Mark-32px.png"></a></span>
+  <a class="mr-4 float-left" routerLink = "/home">Home</a>
+  <a class="mr-4 float-left" routerLink="/grid" >Grid Example</a>
+  <a class="mr-4 float-left" routerLink="/wireframe" >Wireframe</a>
+  <span class="float-right"><a href="https://github.com/bfdurieux/ngFilmes"><img src="./assets/GitHub-Mark-32px.png"></a></span>
   <span class="text-muted float-right mr-4">If I had a copyright it would go here®</span>
 </div>  
 </footer>
