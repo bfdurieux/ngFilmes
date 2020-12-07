@@ -8,7 +8,8 @@ const routes: Routes = [
   { path: 'home', component: ListViewComponent},
   { path:'wireframe', component: WireframeComponent },
   { path:'grid', component: GridComponent },
-  { path: '',   redirectTo: '/home', pathMatch: 'full' }
+  { path: '',   redirectTo: '/home', pathMatch: 'full' },
+  { path: '#', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({
