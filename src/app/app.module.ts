@@ -17,7 +17,6 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { WireframeComponent } from './wireframe/wireframe.component';
 import { AppRoutingModule } from './app-routing.module';
 import { GridComponent } from './grid/grid.component';
-import { RouterModule } from '@angular/router';
 
 
 @NgModule({

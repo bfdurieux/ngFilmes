@@ -10,14 +10,8 @@ import { PaginationComponent } from '../pagination/pagination.component';
 })
 export class ListViewComponent implements OnInit {
   filmes = new Array<Filme>();
-  currentPage: number = 1;
-  testPage: number;
-  perPage: number = 5;
-  index: number = 0;
 
-
-  
-  constructor(private pagination: PaginationComponent) {}
+  constructor() {}
   
   ngOnInit(): void {
   }
@@ -25,8 +19,6 @@ export class ListViewComponent implements OnInit {
   populate(arr){
     this.filmes = arr;
   }
-
-
 }
 
 

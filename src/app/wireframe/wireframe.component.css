@@ -1,0 +1,7 @@
+.img-container {
+  background-image: url("https://user-images.githubusercontent.com/51379834/101355725-be4d5400-3875-11eb-936f-7b6cad0866a7.png");
+  width: calc(100vw - 100px);
+  height: calc(100vh - 200px);
+  background-repeat: no-repeat;
+  background-size: contain;
+}

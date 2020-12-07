@@ -9,7 +9,6 @@ import * as data from "../FILMES.json";
   styleUrls: ['./pagination.component.css']
 })
 export class PaginationComponent implements OnInit {
-
   page = 1;
   perPage = 5;
   head = 0;
@@ -19,7 +18,7 @@ export class PaginationComponent implements OnInit {
   isDisabledBtnPrev = true;
   isDisabledBtnNext = this.count > this.perPage ? false : true;
  
-  @Output() filmesInPage = new EventEmitter();
+  @Output() filmesChange = new EventEmitter();
 
   constructor() { 
   }
@@ -27,11 +26,12 @@ export class PaginationComponent implements OnInit {
   ngOnInit() {
     timer(10).subscribe(() => {
       this.populatePage();
-    });
+    });//avoids error "Expression has changed after it was checked" https://blog.angular-university.io/angular-debugging/
   }
 
   prevPage(): void {
     this.page--;
+
     if(this.page == 1){
       this.isDisabledBtnNext = false;
       this.isDisabledBtnPrev = true;
@@ -41,11 +41,13 @@ export class PaginationComponent implements OnInit {
       this.isDisabledBtnPrev = false;
       this.head -= this.perPage;
     }
+
     this.populatePage();
   }
 
   nextPage(): void {
     this.page++;
+
     if(this.isLastPage()){
       this.isDisabledBtnNext = true;
       this.isDisabledBtnPrev = false;
@@ -53,6 +55,7 @@ export class PaginationComponent implements OnInit {
       this.isDisabledBtnNext = false;
       this.isDisabledBtnPrev = false;
     }
+    
     this.head += this.perPage
     this.populatePage();
   }
@@ -79,6 +82,6 @@ export class PaginationComponent implements OnInit {
       tempFilmes.push(this.filmes[i]);
     }
 
-    this.filmesInPage.emit(tempFilmes);
+    this.filmesChange.emit(tempFilmes);
   }
 }
