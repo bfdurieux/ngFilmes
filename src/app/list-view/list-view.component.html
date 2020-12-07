@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <div class="section-container">
+    <div class="card">
+    <table class="table table-borderless table-hover p-0">
+      <thead class="thead">
+        <tr>
+          <th>Id</th>
+          <th>Nome</th>
+          <th>Ano</th>
+          <th>Diretor</th>
+          <th>Genero</th>
+          <th>Descricao</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr class="text-white" *ngFor="let filme of filmes" [ngbPopover]="popContent" placement="auto bottom" triggers="mouseenter:mouseleave" #p="ngbPopover">
+            <td>{{ filme.id }}</td>
+            <td>{{ filme.name }}</td>
+            <td>{{ filme.year }}</td>
+            <td>{{ filme.director }}</td>
+            <td>{{ filme.genre }}</td>
+            <td>{{ filme.description }}</td>
+            <ng-template #popContent>
+              <div>
+                <img src="{{filme.poster}}">
+              </div>
+          </ng-template>
+          </tr>
+      
+      </tbody>
+    </table>
+  </div>
+  
+</div>
+
+<app-pagination (filmesInPage)="populate($event)">
+
+</app-pagination>
+</div>
+  

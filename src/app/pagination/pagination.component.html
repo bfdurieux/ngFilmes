@@ -1,0 +1,17 @@
+<div class="mt-auto py-3 float-right text-white">
+    <button
+      class="btn btn-sm"
+      (click)="prevPage()"
+      [disabled]="isDisabledBtnPrev == true"
+    >
+      Previous
+    </button>
+    - {{ page }} -
+    <button
+      class="btn btn-sm"
+      (click)="nextPage()"
+      [disabled]="isDisabledBtnNext == true"
+    >
+      Next
+    </button>
+    </div>  

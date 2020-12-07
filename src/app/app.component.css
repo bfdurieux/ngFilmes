@@ -1,0 +1,25 @@
+#main {
+  margin-top: 20px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  background-color: #e2e3e7;
+}
+
+.logo {
+  color: #333;
+  font-weight: 500;
+  font-size: 1.4em;
+  font-family: "Gugi", cursive;
+}
+
+.logo-bg {
+  background-color: #f3bc2c;
+  padding: 3px 8px 3px 8px;
+  border-radius: 5px;
+}
