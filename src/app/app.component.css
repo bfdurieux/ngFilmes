@@ -5,6 +5,8 @@
 
 #main {
   margin-top: 20px;
+  max-width: calc(100vw - 100px);
+  max-height: calc(100vh - 100px);
 }
 
 body {
